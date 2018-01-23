@@ -1,4 +1,8 @@
-.navigation li{
-  list-style-type: none;
-  display:inline-block;
+*{
+  border: 1px solid red;
+}
+
+.img{
+  display: block;
+  max-width: 100%;
 }
