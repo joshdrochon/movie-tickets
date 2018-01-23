@@ -1,6 +1,6 @@
 //BUSINESS LOGIC
-//CONSTRUCTOR
 
+//CONSTRUCTOR
 function Profile (name, movie, date, age) {
   this.userName = name;
   this.movie = movie;
@@ -8,11 +8,21 @@ function Profile (name, movie, date, age) {
   this.age = age;
 }
 
-function ageVer(){
-  if (age < 17){
+
+
+function ageVerify(){
+
+  if(userProfile.movie==="Saw" && userProfile.age <17){
     $(".sorry").show();
+  }else if (userProfile.age >= 50){
+    $(".senior").show();
+  } else if (userProfile.age >= 18) {
+    $(".young-adult").show();
+  } else {
+    $(".child").show();
   }
-}
+
+};
 
 
 //USER INTERFACE LOGIC
@@ -26,7 +36,7 @@ $(document).ready(function(){
     var date = $("#date").val();
     var age = parseInt($("#age").val());
 
-    var userProfile = new Profile (userName, movie, date, age);
+    userProfile = new Profile (userName, movie, date, age);
 
     console.log(userProfile);
 
@@ -41,6 +51,10 @@ $(document).ready(function(){
     $(".movie").text(userProfile.movie);
     $(".date").text(userProfile.date);
 
-    $("#initially-hidden").show();
+    $("#summary").show();
+
+    ageVerify();
   });
+
+
 });
