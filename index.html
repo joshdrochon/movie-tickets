@@ -23,11 +23,38 @@
         </div>
       </div>
       <hr>
-      <form class="form1">
-          <label>Enter a movie </label> <input id="movie" value="">
-          <label>What day? </label> <input id="date" value="">
-          <label>What's your age? </label><input size="8" type="age" value="">
+      <form id="form1">
+        What's your name, braaaaaah???<input id="userName" value="">
+          <select id="movie">
+              <option value="The Last Jedi">The Last Jedi</option>
+              <option value="Jumanji">Jumanji</option>
+              <option value="Spiderman">Spiderman</option>
+          </select>
+          <select id="date">
+              <option value="sun">Sunday</option>
+              <option value="mon">Monday</option>
+              <option value="tues">Tuesday</option>
+              <option value="wed">Wednesday</option>
+              <option value="thurs">Thursday</option>
+              <option value="fri">Friday</option>
+              <option value="sat">Saturday</option>
+          </select>
+          Enter your age: <input id="age" value="">
+
+
+
+          <button class="btn btn-success" type="submit" name="button">Submit</button>
         </form>
+
+
+        <div id="initially-hidden">
+          <div class="sorry">
+            <p>Sorry dude! Try again next year!</p>
+          </div>
+          <div>
+            <p>Hello, <span class="name"></span>! You're all set to see<span class="movie"></span> on <span class="date"></span>. </p>
+          </div>
+        </div>
     </div>
   </body>
 </html>

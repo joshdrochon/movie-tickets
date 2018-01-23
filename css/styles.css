@@ -6,3 +6,11 @@
   display: block;
   max-width: 100%;
 }
+
+#initially-hidden {
+  display: none;
+}
+
+.container h1{
+  text-align: center;
+}
