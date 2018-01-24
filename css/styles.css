@@ -10,14 +10,14 @@ body{
   display: block;
   max-width: 100%;
   border: 2px solid black;
-  box-shadow: 5px 10px gray;
+  box-shadow: 5px 10px 25px gray;
 }
 
 .img-center{
   display: block;
   max-width: 100%;
   border: 2px solid black;
-  box-shadow: 5px 13px #A0A0A0;
+  box-shadow: 5px 13px 25px #A0A0A0;
 }
 
 #initially-hidden {
@@ -26,4 +26,8 @@ body{
 
 .container h1{
   text-align: center;
+}
+
+button{
+  float: right;
 }
