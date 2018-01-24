@@ -10,8 +10,8 @@ function getMovie (userMovie) {
   });
 };
 
-//constructor function fot ticket
-function movieTicket (movieName, timeOfDay, userAge) {
+//constructor function for ticket
+function movieTicket (name, time, age) {
   this.movieName = name;
   this.timeOfDay = time;
   this.userAge = age;
@@ -42,19 +42,20 @@ function fillMovieForm() {
   });
 }
 
-function calculatePrice () {
+function calculatePrice (ticket) {
 
-//  var age = movieTicket.userAge;
 
-  if (movieTicket.userAge > 2 && movieTicket.userAge <= 17) {
-    price += 10;
-    console.log(movieTicket.userAge);
-  } else if (movieTicket.userAge >= 18 && movieTicket.userAge <= 60) {
-    price += 14;
-    console.log(movieTicket.userAge);
-  } else if (movieTicket.userAge >= 61) {
-    price += 12;
-    console.log(movieTicket.userAge);
+  var age = ticket.userAge;
+
+  if (age === "child") {
+    ticket.price += 10;
+    console.log(ticket.price);
+  } else if (age === "young-adult") {
+    ticket.price += 14;
+    console.log(ticket.price);
+  } else if (age === "senior") {
+    ticket.price += 12;
+    console.log(ticket.price);
   } else {
     alert("Please pick an age.");
   }
@@ -81,8 +82,8 @@ $(document).ready(function () {
 
 
     getMovie(movieName);
-    movieTicket(ticket);
-    calculatePrice();
+    
+    calculatePrice(ticket);
 
   });
 });

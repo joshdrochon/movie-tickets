@@ -1,10 +1,23 @@
-*{
+body{
+  background-color: #F5F5F5;
+}
+
+{
   border: .5px dotted red;
 }
 
 .img{
   display: block;
   max-width: 100%;
+  border: 2px solid black;
+  box-shadow: 5px 10px gray;
+}
+
+.img-center{
+  display: block;
+  max-width: 100%;
+  border: 2px solid black;
+  box-shadow: 5px 13px #A0A0A0;
 }
 
 #initially-hidden {
